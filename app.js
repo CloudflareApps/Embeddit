@@ -6,7 +6,6 @@
     both: false,
     service: "reddit",
     loadMore: true,
-    infiniteScroll: true,
     limit: 5,
     debug: process.env.NODE_ENV === "development"
   }
@@ -33,6 +32,7 @@
     }
 
     Embedd.init({...CONFIG,
+      infiniteScroll: options.infiniteScroll,
       url: href
     })
   }

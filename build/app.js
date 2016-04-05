@@ -12,7 +12,6 @@ var _slicedToArray = function () { function sliceIterator(arr, i) { var _arr = [
     both: false,
     service: "reddit",
     loadMore: true,
-    infiniteScroll: true,
     limit: 5,
     debug: "development" === "development"
   };
@@ -43,6 +42,7 @@ var _slicedToArray = function () { function sliceIterator(arr, i) { var _arr = [
     }
 
     Embedd.init(_extends({}, CONFIG, {
+      infiniteScroll: options.infiniteScroll,
       url: href
     }));
   }

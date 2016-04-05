@@ -13,7 +13,7 @@ var _slicedToArray = function () { function sliceIterator(arr, i) { var _arr = [
     service: "reddit",
     loadMore: true,
     infiniteScroll: true,
-    limit: 20,
+    limit: 5,
     debug: "development" === "development"
   };
 

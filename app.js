@@ -7,7 +7,7 @@
     service: "reddit",
     loadMore: true,
     infiniteScroll: true,
-    limit: 20,
+    limit: 5,
     debug: process.env.NODE_ENV === "development"
   }
 

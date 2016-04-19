@@ -19,12 +19,9 @@
     element = Eager.createElement(options.location, element)
     element.classList.add(CONTAINER_CLASS)
 
-    const href = Eager.siteId === "preview" ? `${scheme}://${host}${path}` : window.location
+    const url = Eager.siteId === "preview" ? `${scheme}://${host}${path}` : window.location
 
-    Embedd.init({...CONFIG,
-      infiniteScroll: options.infiniteScroll,
-      url: href
-    })
+    Embedd.init({...CONFIG, url})
   }
 
   if (document.readyState === "loading") {

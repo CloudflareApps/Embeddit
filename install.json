@@ -35,12 +35,6 @@
           "selector": "body",
           "method": "append"
         }
-      },
-      "infiniteScroll": {
-        "order": 1,
-        "description": "More comments will be loaded when you near the bottom of the page.",
-        "title": "Load more comments on scroll",
-        "type": "boolean"
       }
     }
   }

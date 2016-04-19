@@ -27,12 +27,9 @@ var _extends = Object.assign || function (target) { for (var i = 1; i < argument
     element = Eager.createElement(options.location, element);
     element.classList.add(CONTAINER_CLASS);
 
-    var href = Eager.siteId === "preview" ? scheme + "://" + host + path : window.location;
+    var url = Eager.siteId === "preview" ? scheme + "://" + host + path : window.location;
 
-    Embedd.init(_extends({}, CONFIG, {
-      infiniteScroll: options.infiniteScroll,
-      url: href
-    }));
+    Embedd.init(_extends({}, CONFIG, { url: url }));
   }
 
   if (document.readyState === "loading") {

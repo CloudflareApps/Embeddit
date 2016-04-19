@@ -14,22 +14,12 @@
   let options = INSTALL_OPTIONS
 
   function updateElement() {
+    const {host, path, scheme} = Eager.proxy.originalURL.parsed
+
     element = Eager.createElement(options.location, element)
     element.classList.add(CONTAINER_CLASS)
 
-    const {pathname} = window.location
-    let {href} = window.location
-
-    if (Eager.siteId === "preview") {
-      const [encodedDomain] = href.split(".p.eager.works")
-
-      const decodedDomain = encodedDomain
-        .replace(/(s_www|h_www)/, "www")
-        .replace(/_/g, ".")
-
-      href = decodedDomain + pathname
-      console.log(href)
-    }
+    const href = Eager.siteId === "preview" ? `${scheme}://${host}${path}` : window.location
 
     Embedd.init({...CONFIG,
       infiniteScroll: options.infiniteScroll,

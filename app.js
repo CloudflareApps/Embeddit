@@ -19,7 +19,7 @@
     element = Eager.createElement(options.location, element)
     element.classList.add(CONTAINER_CLASS)
 
-    const url = Eager.siteId === "preview" ? `${scheme}://${host}${path}` : window.location
+    const url = INSTALL_ID === "preview" ? `${scheme}://${host}${path}` : window.location
 
     Embedd.init({...CONFIG, url})
   }

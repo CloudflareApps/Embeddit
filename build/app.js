@@ -3,6 +3,8 @@
 var _extends = Object.assign || function (target) { for (var i = 1; i < arguments.length; i++) { var source = arguments[i]; for (var key in source) { if (Object.prototype.hasOwnProperty.call(source, key)) { target[key] = source[key]; } } } return target; };
 
 (function () {
+  if (!window.addEventListener) return; // Check for IE9+
+
   var CONTAINER_CLASS = "eager-embeddit";
   var CONFIG = {
     element: "." + CONTAINER_CLASS,
@@ -38,7 +40,7 @@ var _extends = Object.assign || function (target) { for (var i = 1; i < argument
     updateElement();
   }
 
-  INSTALL_SCOPE = {
+  window.INSTALL_SCOPE = {
     setOptions: function setOptions(nextOptions) {
       options = nextOptions;
 

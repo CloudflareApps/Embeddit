@@ -10,7 +10,7 @@
     "Eager": false,
     "Embedd": false,
     "INSTALL_OPTIONS": false,
-    "INSTALL_SCOPE": false,
+    "INSTALL_ID": false
   },
   "parser": "babel-eslint",
   "plugins": [

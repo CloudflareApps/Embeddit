@@ -1,4 +1,6 @@
 (function () {
+  if (!window.addEventListener) return // Check for IE9+
+
   const CONTAINER_CLASS = "eager-embeddit"
   const CONFIG = {
     element: "." + CONTAINER_CLASS,
@@ -31,7 +33,7 @@
     updateElement()
   }
 
-  INSTALL_SCOPE = {
+  window.INSTALL_SCOPE = {
     setOptions(nextOptions) {
       options = nextOptions
 

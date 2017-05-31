@@ -2,16 +2,16 @@
   "resources": {
     "head": [
       {
-        "src": "vendor/embedd.min.js",
+        "src": "vendor/embedd.js",
         "type": "script"
       },
       {
-        "src": "app.css",
+        "src": "build/app.css",
         "type": "style"
       },
       {
         "type": "script",
-        "src": "./build/app.js"
+        "src": "build/app.js"
       }
     ]
   },

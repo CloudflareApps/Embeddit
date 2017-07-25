@@ -16,13 +16,16 @@
   let options = INSTALL_OPTIONS
 
   function updateElement () {
-    const {host, path, scheme} = INSTALL.proxy.originalURL.parsed
+    let url = window.location
+
+    if (INSTALL_ID === 'preview') {
+      const {host, path, scheme} = INSTALL.proxy.originalURL.parsed
+      url = INSTALL_ID === 'preview' ? `${scheme}://${host}${path}` : window.location
+    }
 
     element = INSTALL.createElement(options.location, element)
     element.setAttribute('app', 'embeddit')
     element.className = CONTAINER_CLASS
-
-    const url = INSTALL_ID === 'preview' ? `${scheme}://${host}${path}` : window.location
 
     window.Embedd.init({...CONFIG, url})
   }
